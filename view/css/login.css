@@ -1,15 +1,59 @@
 .divider:after,
 .divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
 }
+
 .h-custom {
-height: calc(100% - 73px);
+    height: calc(100% - 73px);
 }
+
 @media (max-width: 450px) {
-.h-custom {
-height: 100%;
+    .h-custom {
+        height: 100%;
+    }
 }
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('./view/img/login_bg.jpg');
+    min-height: 100%;
+    min-width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 20px !important;
+    background-color: #ffffff3d !important;
+    width: 30vw !important;
+    height: 70vh !important;
+    box-shadow: 2px 2px 15px 1px #ffffff82, -2px -2px 15px 1px #ffffff80;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.link {
+    color: rgb(194, 132, 244);
+}
+
+.link:hover {
+    color: rgb(255, 255, 255);
+}
+
+.form-control {
+    background-color: #ffffff3d !important;
+    color: white !important;
 }

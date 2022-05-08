@@ -1,31 +1,7 @@
-<?php
-session_start();
-$name = '';
-$newEmail = '';
-$newPassword = '';
+<style>
+    <?php include './view/css/register.css'; ?>
+</style>
 
-// hier die Werte befüllen
-if (isset($_SESSION['name'])) {
-    $name = $_SESSION['name'];
-    $newEmail = $_SESSION['newEmail'];
-    $newPassword = $_SESSION['newPassword'];
-}
-
-
-// falls Sie den $benutzer nicht befült haben
-// bekommt er hier einen  Initialwert
-if (strlen($name) < 2) {
-    $name = "initial";
-}
-$data = $name . "\n" . $newEmail . "\n" . $newPassword;
-
-
-//hier die Daten speichern
-$directorypfad = "model/";
-$filename = $directorypfad . "user_" . $name . ".data";
-file_put_contents($filename, $data);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,77 +16,53 @@ file_put_contents($filename, $data);
 </head>
 
 <body>
-    <section class="vh-100 bg-dark">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
-                        <div class="card-body p-md-5">
-                            <div class="row justify-content-center">
-                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    <div class="card text-white container">
+        <div class="card-body">
+            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+            <form action="controller/register-to-login.php" method="post" class="mx-1 mx-md-4">
 
-                                    <form action="controller/register-to-login.php" method="post" class="mx-1 mx-md-4">
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label">Name</label>
-                                                <input type="text" name="name" required="required" class="form-control" /></input>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label">Email</label>
-                                                <input type="email" name="newEmail" required="required" class="form-control" /></input>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label">Password</label>
-                                                <input type="password" name="newPassword" required="required" class="form-control" /></input>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label class="form-label">Repeat your password</label>
-                                                <input type="password" name="rePassword" required="required" class="form-control" /></input>
-                                            </div>
-                                        </div>
-
-                                        <!-- <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                            <label class="form-check-label" for="form2Example3">
-                                                I agree all statements in <a href="#!">Terms of service</a>
-                                            </label>
-                                        </div> -->
-
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" name="submit" class="btn btn-dark btn-lg">Register</button>
-                                        </div>
-
-                                    </form>
-
-                                </div>
-                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                    <img src="view/img/Shopping-Clipart-Background.png" class="img-fluid" alt="Shopping Clipart">
-
-                                </div>
-                            </div>
-                        </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" required="required" class="form-control" /></input>
                     </div>
                 </div>
-            </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="newEmail" required="required" class="form-control" /></input>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="newPassword" required="required" class="form-control" /></input>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label">Repeat your password</label>
+                        <input type="password" name="rePassword" required="required" class="form-control" /></input>
+                    </div>
+                </div>
+
+                <div class="text-center text-lg-start mt-4 pt-2">
+                    <button type="submit" name="submit" class="btn btn-dark btn-outline-light btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">You already have an account? <a class="link" href="register.php" class="link-danger">Log in</a></p>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">Visit as guest <a class="link" href="index.php" class="link-danger">Guest</a></p>
+                </div>
+
+            </form>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>

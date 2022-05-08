@@ -1,0 +1,39 @@
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5)
+}
+
+.toolbarLB {
+    text-align: right;
+    padding: 3px;
+}
+
+.closeLB {
+    color: red;
+    cursor: pointer;
+}
+
+.lightbox .iframeContainer {
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.473);
+    padding: 2px;
+    border-radius: 20px !important;
+}
+
+.lightbox.closed {
+    display: none;
+}
+
+.iframe {
+    width: 30vw;
+    height: 50vh;
+    vertical-align: middle
+}
