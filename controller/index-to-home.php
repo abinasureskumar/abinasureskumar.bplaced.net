@@ -1,3 +1,4 @@
+<!-- login to home page (login) -->
 <?php
 session_start();
 
@@ -14,7 +15,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "db_styleshop";
+$database = "db_planet";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -50,9 +51,9 @@ while ($zeile = mysqli_fetch_array($db_erg, MYSQLI_ASSOC)) {
 }
 
 if (isset($zeile['password'])) {
-    header('location: ../index.php');
+    header('location: ../home.php');
 } else {
-    header('location: ../login.php');
+    header('location: ../index.php');
 }
 
 mysqli_free_result($db_erg);

@@ -20,7 +20,7 @@
         <div class="card-body">
             <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-            <form action="controller/register-to-login.php" method="post" class="mx-1 mx-md-4">
+            <form action="controller/register-to-index.php" method="post" class="mx-1 mx-md-4">
 
                 <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -56,8 +56,8 @@
 
                 <div class="text-center text-lg-start mt-4 pt-2">
                     <button type="submit" name="submit" class="btn btn-dark btn-outline-light btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-                    <p class="small fw-bold mt-2 pt-1 mb-0">You already have an account? <a class="link" href="register.php" class="link-danger">Log in</a></p>
-                    <p class="small fw-bold mt-2 pt-1 mb-0">Visit as guest <a class="link" href="index.php" class="link-danger">Guest</a></p>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">You already have an account? <a class="link" href="index.php" class="link-danger">Log in</a></p>
+                    <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Visit as guest <a class="link" href="home.php" class="link-danger">Guest</a></p> -->
                 </div>
 
             </form>

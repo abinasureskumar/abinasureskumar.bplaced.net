@@ -1,3 +1,4 @@
+<!-- register to login page -->
 <?php
 session_start();
 //checks if passwords are matching
@@ -8,7 +9,7 @@ if ($_REQUEST['newPassword'] != $_REQUEST['rePassword']) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "db_styleshop";
+    $database = "db_planet";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
@@ -27,14 +28,14 @@ if ($_REQUEST['newPassword'] != $_REQUEST['rePassword']) {
         header('location: ../register.php');
     } else if ($conn->query($sql) === TRUE) {
         // echo "New user created successfully";
-        header('location: ../login.php');
+        header('location: ../index.php');
     } else {
         // echo "Error: " . $sql . "<br>" . $conn->error;
         header('location: ../register.php');
     }
     // if ($conn->query($sql) === TRUE) {
     //     // echo "New user created successfully";
-    //     header('location: ../login.php');
+    //     header('location: ../index.php');
     // } else {
     //     // echo "Error: " . $sql . "<br>" . $conn->error;
     //     header('location: ../register.php');
@@ -62,9 +63,9 @@ if ($_REQUEST['newPassword'] != $_REQUEST['rePassword']) {
     }
 
     if (isset($zeile['password'])) {
-        header('location: ../index.php');
+        header('location: ../home.php');
     } else {
-        header('location: ../login.php');
+        header('location: ../index.php');
     }
 }
 

@@ -95,8 +95,13 @@ body {
 }
 
 .btn-margin {
-  margin-left: 2px !important;
-  margin-right: 2px !important;
+  margin-left: 0.4rem !important;
+  margin-right: 0.4rem !important;
+}
+
+.btn-margin-logout {
+  margin-left: 0.7rem !important;
+  margin-right: 0.7rem !important;
 }
 
 header {
@@ -4936,8 +4941,14 @@ textarea.form-control-lg {
   /* transform: scale(0.9) */
 }
 
-.earth-img {
-  /* filter: grayscale(0.5) blur(1px); */
+.img-one {
+  position: relative;
+  filter: grayscale(2) blur(2px);
+}
+
+.img-two {
+  position: absolute;
+  margin-top: 5rem;
 }
 
 .card>hr {
