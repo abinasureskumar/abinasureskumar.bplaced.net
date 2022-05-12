@@ -74,12 +74,12 @@
 
 #rangeValue {
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .rangeValue {
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .deleteAdd-container {
@@ -105,12 +105,12 @@
     /* align-items: flex-start; */
     /* padding: 1rem; */
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .popTitle {
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .popElements {
@@ -119,7 +119,7 @@
     flex-direction: column;
     align-items: flex-start;
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .popDescTitle {
@@ -130,7 +130,7 @@
 
 .popDesc {
     color: rgb(255, 255, 255) !important;
-    font-family:'Courier New', Courier, monospace !important;
+    font-family: 'Courier New', Courier, monospace !important;
     margin-left: 2rem;
 }
 

@@ -17,30 +17,26 @@
 <body>
     <div class="card text-white container">
         <div class="card-body">
-            <!-- <div class="row justify-content-center"> -->
-                <!-- <div class="col-md-6 col-lg-6 col-xl-5 order-2 order-lg-1"> -->
-                    <div class="divider d-flex align-items-center my-4">
-                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log In</p>
-                    </div>
-                    <form action="controller/index-to-home.php" method="post" class="mx-1 mx-md-4">
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3">Email address</label>
-                            <input type="email" name="email" required="required" class="form-control form-control-lg" />
-                        </div>
-                        <!-- Password input -->
-                        <div class="form-outline mb-3">
-                            <label class="form-label" for="form3Example4">Password</label>
-                            <input type="password" name="password" required="required" class="form-control form-control-lg" />
-                        </div>
-                        <!-- register or guest -->
-                        <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="submit" name="submit" class="btn btn-dark btn-outline-light btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a class="link" href="register.php" class="link-danger">Register</a></p>
-                        </div>
-                    </form>
-                <!-- </div> -->
-            <!-- </div> -->
+            <div class="divider d-flex align-items-center my-4">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log In</p>
+            </div>
+            <form action="controller/index-to-home.php" method="post" class="mx-1 mx-md-4">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    <input type="email" name="email" required="required" class="form-control form-control-lg" />
+                </div>
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form3Example4">Password</label>
+                    <input type="password" name="password" required="required" class="form-control form-control-lg" />
+                </div>
+                <!-- register or guest -->
+                <div class="text-center text-lg-start mt-4 pt-2">
+                    <button type="submit" name="submit" class="btn btn-dark btn-outline-light btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a class="link" href="register.php" class="link-danger">Register</a></p>
+                </div>
+            </form>
         </div>
     </div>
 

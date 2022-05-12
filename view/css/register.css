@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.37),rgba(0,0,0,0.37)), url('../img/register_bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)), url('../img/register_bg.jpg');
     min-height: 100%;
     min-width: 100%;
     background-size: 100% 100%;
