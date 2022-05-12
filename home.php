@@ -11,24 +11,31 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Space market</title>
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="view/icons/space.png" />
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <!-- <link href="view/css/main.css" rel="stylesheet" /> -->
-    <!-- <script src="controller/js/scripts.js"></script> -->
 
 </head>
 
 <body>
     <!-- POPUP card -->
-    <div class="text-center bg-danger popup-btn">
+    <div class="text-center bg-dark popup-btn">
         <div class="popup-card" id="popup">
-            <!-- <button class="btn-close closeBtn" variant="white" onclick="hide('popup')"></button> -->
             <div id="lmaolol"></div>
-            <div class="delete">
-                <button class="bi bi-trash btn btn-black btn-outline-danger deleteBtn" onclick="hide('popup')"></button>
+            <div class="sbtn-container">
+                <button type="button" class="btn btn-outline-light btn-sm sBtn">m²</button>
+                <button type="button" class="btn btn-outline-light btn-sm sBtn" disabled>km²</button>
+            </div>
+
+            <input type="range" min="1" max="100" value="50" class="form-range" id="rangeSlider">
+            <p class="rangeValue">Value: <span name="rangeValue" id="rangeValue"></span>m²</p>
+
+            <div class="deleteAdd-container">
+                <div class="delete">
+                    <button class="bi bi-trash btn btn-black btn-outline-danger deleteBtn btn-lg" onclick="hide('popup')"></button>
+                </div>
+                <form action="cart.php" method="post">
+                    <button name="AddToCart" class="btn btn-black btn-outline-primary AddBtn">Add to Cart</button>
+                </form>
             </div>
         </div>
     </div>

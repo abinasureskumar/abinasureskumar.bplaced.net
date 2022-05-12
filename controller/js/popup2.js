@@ -2,60 +2,82 @@ $ = function (id) {
     return document.getElementById(id);
 }
 
-
-
 var cards = [
     {
         imageURL: "view/img/mercury.jpg",
         name: "Mercury",
         price: "$40.00 - $80.00",
-        rating: 4
+        rating: 4,
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/venus.jpg",
         name: "Venus",
         price: "$18.00",
         rating: 3,
-        salePrice: "$50.00"
+        salePrice: "$50.00",
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/earth.jpg",
         soldout: true,
         name: "Earth",
         price: "$25.00",
-        salePrice: "$50.00"
+        salePrice: "$50.00",
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/mars.jpg",
         name: "Mars",
         price: "$40.00",
-        rating: 5
+        rating: 5,
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/jupiter.jpg",
         name: "Jupiter",
         price: "$25.00",
         rating: 3,
-        salePrice: "$50.00"
+        salePrice: "$50.00",
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/saturn.jpg",
         name: "Saturn",
         price: "$120.00 - $280.00",
-        rating: 5
+        rating: 5,
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/uranus.jpg",
         name: "Uranus",
         price: "$18.00",
         rating: 2,
-        salePrice: "$20.00"
+        salePrice: "$20.00",
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     },
     {
         imageURL: "view/img/neptune.jpg",
         name: "Neptune",
         price: "$40.00",
-        rating: 5
+        rating: 5,
+        description: "Description",
+        descOne: "Surface: 74'800'000 km²",
+        descTwo: "Day Duration: 58d 15 h 30 min"
     }
 ]
 
@@ -67,16 +89,42 @@ function show(id) {
     var div = document.getElementById("lmaolol")
     div.innerHTML = "";
 
-
-    // var text = document.createElement('h1')
-    // text.innerHTML = currentCard.name;
-    // text.className = "text-dark"
     var img = document.createElement('img')
     img.src = currentCard.imageURL;
     img.className = "popupcard-img"
 
-    // div.appendChild(text);
+    var popContainer = document.createElement('div')
+    popContainer.className = "text-white popContainer";
+    var text = document.createElement('h1')
+    text.innerHTML = currentCard.name;
+    text.className = "text-light popTitle"
+
+    var popElements = document.createElement('div')
+    popElements.className = "text-white popElements";
+    var desc = document.createElement('ul')
+    desc.innerHTML = currentCard.description;
+    desc.className = "text-light popDescTitle";
+    var descOne = document.createElement('li')
+    descOne.innerHTML = currentCard.descOne;
+    descOne.className = "text-light popDesc"
+
+    var descTwo = document.createElement('li')
+    descTwo.innerHTML = currentCard.descTwo;
+    descTwo.className = "text-light popDesc"
+
+    var price = document.createElement('li')
+    price.innerHTML = currentCard.price;
+    price.className = "text-light popDesc"
+    
+
     div.appendChild(img);
+    div.appendChild(popContainer);
+    popContainer.appendChild(text);
+    div.appendChild(popElements);
+    popElements.appendChild(desc);
+    popElements.appendChild(descOne);
+    popElements.appendChild(descTwo);
+    popElements.appendChild(price);
 }
 
 var hide = function (id) {
@@ -173,3 +221,12 @@ cards.map((card, index) => {
 
     parent.appendChild(cardContainer)
 })
+
+var slider = document.getElementById("rangeSlider");
+var output = document.getElementById("rangeValue");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}

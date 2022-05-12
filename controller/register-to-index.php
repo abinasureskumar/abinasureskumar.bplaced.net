@@ -33,34 +33,34 @@ if ($_REQUEST['newPassword'] != $_REQUEST['rePassword']) {
         // echo "Error: " . $sql . "<br>" . $conn->error;
         header('location: ../register.php');
     }
-    // if ($conn->query($sql) === TRUE) {
-    //     // echo "New user created successfully";
-    //     header('location: ../index.php');
-    // } else {
-    //     // echo "Error: " . $sql . "<br>" . $conn->error;
-    //     header('location: ../register.php');
-    // }
+    if ($conn->query($sql) === TRUE) {
+        // echo "New user created successfully";
+        header('location: ../index.php');
+    } else {
+        // echo "Error: " . $sql . "<br>" . $conn->error;
+        header('location: ../register.php');
+    }
 
     $sql2 = "SELECT * FROM `tbl_users`;";
 
     $db_test = mysqli_query($conn, $sql2);
-    if (!$db_test) {
+    if (!$db_planet) {
         die('Ungültige Abfrage: ');
     }
 
-    while ($check_email = mysqli_fetch_array($db_erg, MYSQLI_ASSOC)) {
-        //   echo "<br>". $zeile['email'];
-        //   echo " ". $zeile['password'];
-        if ($zeile['email'] == $_REQUEST['email']) {
-            //   echo "<br> email gefunden";
-            if ($zeile['password'] == $_REQUEST['password']) {
-                //   echo "<br> password gefunden";
-                $_SESSION['email'] = $_REQUEST['email'];
-                $_SESSION['password'] = $_REQUEST['password'];
-                break;
-            }
-        }
-    }
+    // while ($check_email = mysqli_fetch_array($db_erg, MYSQLI_ASSOC)) {
+    //     //   echo "<br>". $zeile['email'];
+    //     //   echo " ". $zeile['password'];
+    //     if ($zeile['email'] == $_REQUEST['email']) {
+    //         //   echo "<br> email gefunden";
+    //         if ($zeile['password'] == $_REQUEST['password']) {
+    //             //   echo "<br> password gefunden";
+    //             $_SESSION['email'] = $_REQUEST['email'];
+    //             $_SESSION['password'] = $_REQUEST['password'];
+    //             break;
+    //         }
+    //     }
+    // }
 
     if (isset($zeile['password'])) {
         header('location: ../home.php');
