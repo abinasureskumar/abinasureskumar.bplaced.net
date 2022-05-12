@@ -115,7 +115,7 @@ function show(id) {
     var price = document.createElement('li')
     price.innerHTML = currentCard.price;
     price.className = "text-light popDesc"
-    
+
 
     div.appendChild(img);
     div.appendChild(popContainer);
@@ -141,7 +141,7 @@ cards.map((card, index) => {
     if (card.soldout !== undefined) {
         cardElement.className += " nohover"
     }
-    
+
     var img = document.createElement("img")
     img.src = card.imageURL;
 
@@ -204,7 +204,7 @@ cards.map((card, index) => {
     }
 
     btn.innerHTML = "Add to cart";
-    btn.onclick = function  () {
+    btn.onclick = function () {
         currentCard = card;
         show('popup')
         console.log(currentCard)
@@ -227,6 +227,6 @@ var output = document.getElementById("rangeValue");
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
+slider.oninput = function () {
+    output.innerHTML = this.value;
 }
